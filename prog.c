@@ -164,6 +164,16 @@ int main(){
 
 
 
+	//free all data
+	strArr_free(result1);
+	strArr_free(result2);
+	strArr_free(result3);
+	strArr_free(result4);
+	strArr_free(result5);
+	strArr_free(result6);
+
+
+
 
 
 

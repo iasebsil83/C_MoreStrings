@@ -144,6 +144,21 @@ int strArr_len(char** sa){
 	return len;
 }
 
+void strArr_free(char** sa){
+
+	//error case
+	if(sa == NULL){
+		printf("RUNTIME ERROR > more_strings.c : strArr_free() : Input string array is NULL.\n");
+		return;
+	}
+
+	//free all contained strings
+	for(int s=0; s < strArr_len(sa); s++){
+		free(sa[s]);
+	}
+	free(sa);
+}
+
 char** strArr_split(char* s, char c){
 
 	//error case
