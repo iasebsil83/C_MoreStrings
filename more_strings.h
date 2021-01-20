@@ -23,6 +23,7 @@
 // -------------------------------- STRINGS --------------------------------
 
 //utilities
+char* str_malloc(char* s);
 int str_indexOf(char* s, char c);
 
 

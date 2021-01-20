@@ -3,6 +3,7 @@
 //standard
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 
@@ -34,9 +35,10 @@
         More strings is just an utility program that offers some utility functions
     for strings & string arrays.
 
-    13/01/2021 > [0.1.0] :
+    20/01/2021 > [0.1.0] :
     - Created more_strings.c/.h.
     - Created demonstration program.
+    - Added str_malloc().
 
     BUGS : .
     NOTES : .
@@ -88,6 +90,28 @@
 // ---------------- STRINGS ----------------
 
 //utilities
+char* str_malloc(char* s){
+
+	//length
+	int len = strlen(s);
+	if(len <= 0){
+		printf("RUNTIME ERROR > more_strings.c : str_malloc() : Cannot allocate 0 bytes.\n");
+		return NULL;
+	}
+
+	//new string
+	char* newS = malloc(len);
+	if(newS == NULL){
+		printf("FATAL ERROR > more_strings.c : str_malloc() : Computer refuses to give more memory.\n");
+		exit(EXIT_FAILURE);
+	}
+
+	//write into new string
+	sprintf(newS, "%s", s);
+
+	return newS;
+}
+
 int str_indexOf(char* s, char c){
 	//error case
 	if(s == NULL){
