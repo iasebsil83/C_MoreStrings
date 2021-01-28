@@ -20,6 +20,31 @@
 
 
 
+// -------------------------------- HEX TOOLS --------------------------------
+
+//int
+int hexCharToInt(char c); //output value is on 32 bits but only the 4 LSb are used
+int hexStrToInt(char* s); // #h# don't require an '\0' at the end
+                          //example : "ffffff9c" => -100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // -------------------------------- STRINGS --------------------------------
 
 //utilities

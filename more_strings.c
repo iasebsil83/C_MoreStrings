@@ -87,6 +87,87 @@
 
 
 
+// -------------------------------- HEX TOOLS --------------------------------
+
+//int
+int hexCharToInt(char c){ //output value is on 32 bits but only the 4 LSb are used
+	switch(c){
+		case '1':
+			return 0x1;
+		case '2':
+			return 0x2;
+		case '3':
+			return 0x3;
+		case '4':
+			return 0x4;
+		case '5':
+			return 0x5;
+		case '6':
+			return 0x6;
+		case '7':
+			return 0x7;
+		case '8':
+			return 0x8;
+		case '9':
+			return 0x9;
+		case 'a':
+		case 'A':
+			return 0xa;
+		case 'b':
+		case 'B':
+			return 0xb;
+		case 'c':
+		case 'C':
+			return 0xc;
+		case 'd':
+		case 'D':
+			return 0xd;
+		case 'e':
+		case 'E':
+			return 0xe;
+		case 'f':
+		case 'F':
+			return 0xf;
+	}
+
+	return 0x0;
+}
+
+int hexStrToInt(char* s){ // #h# don't require an '\0' at the end
+	return            //example : "ffffff9c" => -100
+		( (hexCharToInt(s[0]) << 28) & 0xf0000000 ) + //byte 4 (MSB)
+		( (hexCharToInt(s[1]) << 24) & 0x0f000000 ) +
+
+		( (hexCharToInt(s[2]) << 20) & 0x00f00000 ) + //byte 3
+		( (hexCharToInt(s[3]) << 16) & 0x000f0000 ) +
+
+		( (hexCharToInt(s[4]) << 12) & 0x0000f000 ) + //byte 2
+		( (hexCharToInt(s[5]) <<  8) & 0x00000f00 ) +
+
+		( (hexCharToInt(s[6]) <<  4) & 0x000000f0 ) + //byte 1 (LSB)
+		(  hexCharToInt(s[7])        & 0x0000000f )
+	;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ---------------- STRINGS ----------------
 
 //utilities
