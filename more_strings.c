@@ -133,7 +133,7 @@ int hexCharToInt(char c){ //output value is on 32 bits but only the 4 LSb are us
 	return 0x0;
 }
 
-int hexStrToInt(char* s){ // #h# don't require an '\0' at the end
+int hexStrToInt(char* s){ // #s# don't require an '\0' at the end
 	return            //example : "ffffff9c" => -100
 		( (hexCharToInt(s[0]) << 28) & 0xf0000000 ) + //byte 4 (MSB)
 		( (hexCharToInt(s[1]) << 24) & 0x0f000000 ) +
