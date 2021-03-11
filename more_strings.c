@@ -174,7 +174,7 @@ int hexStrToInt(char* s){ // #s# don't require an '\0' at the end
 char* str_malloc(char* s){
 
 	//length
-	int len = strlen(s);
+	int len = strlen(s)+1;
 	if(len <= 0){
 		printf("RUNTIME ERROR > more_strings.c : str_malloc() : Cannot allocate 0 bytes.\n");
 		return NULL;
