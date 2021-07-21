@@ -7,15 +7,7 @@
 
 
 //strings & string arrays utility
-#include "more_strings.h"
-
-
-
-
-
-
-
-
+#include "../lib/more_strings.h"
 
 
 
@@ -74,9 +66,6 @@
 int main(){
 	//presentation
 	printf("I.A. > This is a basic demonstration of \"more_strings.c/.h\".\n");
-
-
-
 
 
 
@@ -171,9 +160,6 @@ int main(){
 	strArr_free(result4);
 	strArr_free(result5);
 	strArr_free(result6);
-
-
-
 
 
 

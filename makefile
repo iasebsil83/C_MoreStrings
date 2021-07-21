@@ -6,11 +6,11 @@ run: more_strings.o prog.o
 
 
 #example program
-prog.o: prog.c more_strings.h
-	gcc -Wall -c prog.c -O2
+prog.o: src/prog.c lib/more_strings.h
+	gcc -Wall -c src/prog.c -O2
 
 
 
 #more_strings library
-more_strings.o: more_strings.c more_strings.h
-	gcc -Wall -c more_strings.c -O2
+more_strings.o: lib/more_strings.c lib/more_strings.h
+	gcc -Wall -c lib/more_strings.c -O2

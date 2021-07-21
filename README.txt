@@ -1,9 +1,8 @@
-This program is a simple utility library that offers some useful string &
-string array functions.
+This program is a simple utility library that offers some useful string & string array functions.
 
-A demonstration program is made in prog.c.
+A demonstration program is made in src/prog.c.
 
-More information about this library are available in more_strings.c.
+More information about this library are available in lib/more_strings.c.
 
 
 
