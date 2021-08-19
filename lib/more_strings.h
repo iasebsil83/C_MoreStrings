@@ -12,6 +12,14 @@
 
 
 
+// -------------------------------- IMPORTATIONS --------------------------------
+
+//standard
+#include <string.h>
+
+
+
+
 
 
 
@@ -37,27 +45,14 @@ int hexStrToInt(char* s); // #h# don't require an '\0' at the end
 
 
 
-
-
-
-
-
-
-
-
 // -------------------------------- STRINGS --------------------------------
 
 //utilities
 char* str_malloc(char* s);
 int str_indexOf(char* s, char c);
-
-
-
-
-
-
-
-
+#define str_equal(s1,s2) (!strcmp(s1, s2))
+char* str_cat(char* s1, char* s2);
+char* str_append(char* src, char* dst); //use : A = str_append(A,B);
 
 
 
@@ -76,14 +71,6 @@ int str_indexOf(char* s, char c);
 int strArr_len(char** sa);
 void strArr_free(char** sa);
 char** strArr_split(char* s, char c);
-
-
-
-
-
-
-
-
 
 
 

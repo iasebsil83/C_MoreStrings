@@ -21,14 +21,6 @@
 
 
 
-
-
-
-
-
-
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ More strings [0.1.0] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                  More strings by I.A.
 
@@ -39,6 +31,9 @@
     - Created more_strings.c/.h.
     - Created demonstration program.
     - Added str_malloc().
+
+    19/08/2021 > [0.1.1] :
+    - Added str_equal(), str_cat() and str_append().
 
     BUGS : .
     NOTES : .
@@ -67,14 +62,6 @@
 
     If not, see <https://www.gnu.org/licenses/>.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-
-
-
-
-
-
 
 
 
@@ -160,14 +147,6 @@ int hexStrToInt(char* s){ // #s# don't require an '\0' at the end
 
 
 
-
-
-
-
-
-
-
-
 // ---------------- STRINGS ----------------
 
 //utilities
@@ -194,6 +173,7 @@ char* str_malloc(char* s){
 }
 
 int str_indexOf(char* s, char c){
+
 	//error case
 	if(s == NULL){
 		printf("RUNTIME_ERROR > more_strings.c : str_indexOf() : Input string is NULL.\n");
@@ -210,13 +190,42 @@ int str_indexOf(char* s, char c){
 	return cnt;
 }
 
+char* str_cat(char* s1, char* s2){
 
+	//error case
+	if(s1 == NULL || s2 == NULL){
+		printf("RUNTIME_ERROR > more_strings.c : str_cat() : One of the 2 strings is NULL.\n");
+		return NULL;
+	}
 
+	//create new string
+	size_t len1 = strlen(s1);
+	size_t len2 = strlen(s2);
+	char* result = malloc(len1 + len2);
+	if(result == NULL){
+		printf("FATAL ERROR > more_strings.c : str_cat() : Computer refuses to give more memory.\n");
+		exit(EXIT_FAILURE);
+	}
 
+	//fill new string
+	for(size_t c=0; c < len1; c++){
+		result[c] = s1[c];
+	}
+	for(size_t c=0; c < len2; c++){
+		result[len1+c] = s2[c];
+	}
 
+	return result;
+}
 
+char* str_append(char* src, char* dst){ //use : A = str_append(A,B);
+	char* result = str_cat(src, dst);
 
+	//free source
+	free(src);
 
+	return result;
+}
 
 
 
