@@ -6,12 +6,9 @@
 
 
 
+
 //strings & string arrays utility
 #include "../lib/more_strings.h"
-
-
-
-
 
 
 
@@ -38,20 +35,8 @@
     BUGS : Active bugs in last version.
     NOTES : Notes.
 
-    Contact : 
+    Contact :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -64,6 +49,7 @@
 
 //main
 int main(){
+
 	//presentation
 	printf("I.A. > This is a basic demonstration of \"more_strings.c/.h\".\n");
 

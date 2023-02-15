@@ -7,12 +7,9 @@
 
 
 
+
 //own header
 #include "more_strings.h"
-
-
-
-
 
 
 
@@ -62,10 +59,6 @@
 
     If not, see <https://www.gnu.org/licenses/>.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-
-
 
 
 
@@ -135,10 +128,6 @@ int hexStrToInt(char* s){ // #s# don't require an '\0' at the end
 		(  hexCharToInt(s[7])        & 0x0000000f )
 	;
 }
-
-
-
-
 
 
 
@@ -226,10 +215,6 @@ char* str_append(char* src, char* dst){ //use : A = str_append(A,B);
 
 	return result;
 }
-
-
-
-
 
 
 
