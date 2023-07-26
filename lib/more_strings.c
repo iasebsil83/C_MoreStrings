@@ -18,7 +18,7 @@
 
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ More strings [0.1.0] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ More strings [0.1.1] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                  More strings by I.A.
 
         More strings is just an utility program that offers some utility functions
